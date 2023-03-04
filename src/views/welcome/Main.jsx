@@ -1,8 +1,6 @@
 import React from 'react';
 
-import HeroHome from '../partials/HeroHome';
-  
- 
+import Portfolio from '../partials/Portfolio'; 
 
 import { observer } from "mobx-react";
 
@@ -25,7 +23,7 @@ function Home() {
       <main className="flex-grow">
 
         {/*  Page sections */}
-        <HeroHome />
+        <Portfolio />
 
         {/*<FeatureCode />*/}
 

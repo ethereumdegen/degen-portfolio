@@ -15,6 +15,10 @@ import { copyToClipboard } from '../../../utils/clipboard';
 
 
 
+//disabled for now as there is no associated backend server to provide challenges
+const showSigninButton = false 
+
+
 
 function Web3Sidebar({slot,web3Store,sidebarStore })   {
  
@@ -151,7 +155,7 @@ function Web3Sidebar({slot,web3Store,sidebarStore })   {
 
 
 
-            {web3Store.active && !web3Store.authorized && 
+            {web3Store.active && !web3Store.authorized && showSigninButton &&
                 <div 
               
                 className="w-full text-white my-8 p-2 bg-neutral-600 hover:bg-neutral-700 cursor-pointer"

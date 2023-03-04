@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
  
  
-import FrontendConfig from '@/config/frontend-config'
+import PortfolioConfig from '@/config/portfolio-config'
  
 
-function HeroHome() {
+function Portfolio() {
 
    
   return (
@@ -32,7 +32,7 @@ function HeroHome() {
           {/* Section header */}
           <div className="text-left pb-12 md:pb-16">
 
-          <img src={ `${FrontendConfig.homeImage}` } ></img>
+          <img src={ `${PortfolioConfig.profileImage}` } ></img>
 
          
            
@@ -41,7 +41,7 @@ function HeroHome() {
 
          
 
-               {FrontendConfig.tagline}
+               {PortfolioConfig.tagline}
                 
                 </p>
 
@@ -73,4 +73,4 @@ function HeroHome() {
   );
 }
 
-export default HeroHome;
+export default Portfolio;
