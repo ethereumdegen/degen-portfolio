@@ -4,9 +4,9 @@ import homeImage from '@/assets/images/ensapi_logo.png'
 import favicon from '@/assets/images/fire_logo.png'
 
 const config = {
-    title: 'ENS Api',
-    tagline: 'High-availability data services for Ethereum Name Service domains.',
-    url: 'https://ensapi.io',
+    title: 'Portfolio - ethereumdegen',
+    tagline: '',
+    url: 'https://ethereumdegen,com',
     baseURL: '/',
     favicon: favicon,
     homeImage: homeImage,
@@ -23,9 +23,7 @@ const config = {
          
           { to:'/welcome', label:'Home' },
           { to:'/docs', label:'Docs' },
-       //   { to: '/blog', label: 'Blog' },
-
-       
+    
           
         ],
     },

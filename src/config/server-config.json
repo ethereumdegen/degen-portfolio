@@ -1,15 +1,12 @@
 {
     "development":{
-        "backendServerUrl":"http://localhost:8443" 
- 
+        
     },
     "staging":{
-        "backendServerUrl":"https://api.ensapi.io:8443" 
-         
+      
     },
     "production":{
-        "backendServerUrl":"https://api.ensapi.io:8443" 
-        
+       
     } 
 
 }
