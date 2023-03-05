@@ -55,12 +55,12 @@ function Portfolio() {
                     <div className="flex flex-col border-2 border-gray-200 rounded text-center " key={index}> 
 
                    
-                      <div>
-                        <img src={`${item.image}`}/>
+                      <div className="h-full">
+                        <img  className="my-auto" src={`${item.image}`}/>
 
                       </div>
 
-                      <div> {`${item.title}`} </div>
+                      <div className="bg-gray-800 text-white py-2 font-bold "> {`${item.title}`} </div>
 
                     </div>
 

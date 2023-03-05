@@ -35,8 +35,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Introduction',
-                to: '/docs/intro',
+                label: 'Blog',
+                to: '/blog/',
               } 
             ],
           },

@@ -3,9 +3,11 @@
 import profileImage from '@/assets/images/punk1164.png'
 
 
-import vibegraphImage from '@/assets/images/ensapi_logo.png'
+import vibegraphImage from '@/assets/images/vibegraph.png'
  
-import portfolioImage from '@/assets/images/ensapi_logo.png'
+import portfolioImage from '@/assets/images/portfolio.png'
+
+import ensApiImage from '@/assets/images/ensapi_logo.png'
 
 const config = {
     title: 'Ethereum Degen',
@@ -29,7 +31,16 @@ const config = {
             image: portfolioImage,
             link: "https://github.com/ethereumdegen/degen-portfolio"
 
+        },
+        
+        {
+            title:"ENS API",
+            description:"Fast & free api for ENS domain resolution.",
+            image: ensApiImage,
+            link: "https://ensapi.io"
+
         }
+
 
 
 
