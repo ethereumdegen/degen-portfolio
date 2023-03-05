@@ -56,8 +56,9 @@ function Portfolio() {
 
                    
                       <div className="h-full">
-                        <img  className="my-auto" src={`${item.image}`}/>
-
+                        <a href={item.link} >
+                          <img  className="my-auto" src={`${item.image}`}/>
+                        </a>
                       </div>
 
                       <div className="bg-gray-800 text-white py-2 font-bold "> {`${item.title}`} </div>
