@@ -24,7 +24,12 @@ function Router() {
           },
 
           { 
-            path:"/docs",
+            path:"/blog",
+            element: <Intro/>
+           },
+
+           { 
+            path:"/intro",
             element: <Intro/>
            },
 

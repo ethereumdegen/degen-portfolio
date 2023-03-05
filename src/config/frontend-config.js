@@ -21,8 +21,8 @@ const config = {
         },
         items: [
          
-          { to:'/welcome', label:'Home' },
-          { to:'/docs', label:'Docs' },
+          { to:'/', label:'Home' },
+          { to:'/blog', label:'Blog' },
     
           
         ],

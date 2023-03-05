@@ -37,24 +37,30 @@ function Portfolio() {
 
 
         {/* Hero content */}
-        <div className="pt-32 pb-12 md:pt-40 md:pb-20">
+        <div className="pt-16 pb-6 md:pt-16 md:pb-8">
 
           {/* Section header */}
-          <div className="text-left pb-12 md:pb-16">
+          <div className="t  pb-8 md:pb-8">
 
-        
          
-           
-            <div className="max-w-3xl  ">
-              
+            <div className="w-full  ">
+
+            <div className="grid lg:grid-cols-3 gap-2">
+
                {
 
                 PortfolioConfig.items.map( (item, index ) => (
 
+                  
+                    <div className="flex flex-col border-2 border-gray-200 rounded text-center " key={index}> 
 
-                    <div> 
+                   
+                      <div>
+                        <img src={`${item.image}`}/>
 
-                      An item 
+                      </div>
+
+                      <div> {`${item.title}`} </div>
 
                     </div>
 
@@ -63,6 +69,7 @@ function Portfolio() {
                }
                 
                
+             </div>
 
               </div>
               <div className="max-w-3xl mx-auto mt-16 hidden  ">
