@@ -4,6 +4,12 @@ import AccountDropdownMenu from "@/views/components/account-dropdown-menu/Main.j
 import { observer } from "mobx-react" 
 
 function Main( {sidebarStore, web3Store }  ) {
+
+
+
+  const requireSignIn = false 
+
+
   return (
     <>
        <li>
@@ -28,7 +34,7 @@ function Main( {sidebarStore, web3Store }  ) {
    </div> 
  }
 
- {web3Store.active && !web3Store.authorized && 
+ {web3Store.active && !web3Store.authorized && requireSignIn && 
  <div 
 
  className="inline-block ml-4 py-2 px-4 text-gray-200  text-xl bg-black hover:text-black hover:bg-gradient-to-r from-blue-500 to-teal-400  cursor-pointer border-l-2 border-gray-100"
@@ -45,7 +51,7 @@ function Main( {sidebarStore, web3Store }  ) {
    </div> 
  }
 
-{web3Store.active && web3Store.authorized && 
+{web3Store.active && (web3Store.authorized || !requireSignIn) && 
  <AccountDropdownMenu 
  web3Store = {web3Store}
  />

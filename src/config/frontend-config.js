@@ -28,6 +28,20 @@ const config = {
         ],
     },
 
+      accountMenu: {
+
+
+          items: [
+            {
+              to:'/',
+              label: 'Home'
+            }
+
+
+          ]
+      },
+
+
     footer: {
         style: 'light',
         columns: [

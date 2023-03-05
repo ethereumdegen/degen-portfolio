@@ -20,6 +20,8 @@ import { observer } from "mobx-react"
 
 import { useNavigate } from 'react-router-dom';
 
+import FrontendConfig from "@/config/frontend-config"
+
 
 
 function Main( {sidebarStore, web3Store, sessionStore} ) {
@@ -47,13 +49,24 @@ function Main( {sidebarStore, web3Store, sessionStore} ) {
         </DropdownToggle>
         <DropdownMenu className="w-40 text-lg">
             <DropdownContent>
-            <DropdownItem
-             onClick={()=>{   
-              
-                navigate('/dashboard');
-            }}
-            
-            >Dashboard</DropdownItem>
+
+        { FrontendConfig.accountMenu.items.map( (item, index) => (
+
+                    <DropdownItem
+                    key={index}
+                    onClick={()=>{   
+                    
+                    navigate(`${item.to}`);
+                    }}
+
+                    >{item.label}</DropdownItem>
+
+
+
+        ))}
+
+        
+
             <DropdownItem
         className="text-gray-100 bg-black hover:text-black hover:bg-gradient-to-r from-blue-500 to-teal-400  cursor-pointer border-l-2 border-gray-100 "
         
