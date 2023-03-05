@@ -9,18 +9,12 @@ const config = {
         
         items: [
          
-          { to:'/intro', label:'Introduction' },
+          { to:'/blog', label:'Ethereum Degen\'s Blog' },
+    
+          { to:'/blog/vibegraph', label:'Vibegraph' },
     
 
-          
-
-          { to: '/endpoints', label: 'Endpoints' },
-
-          { to: '/endpoints/resolve', label: 'Resolve Domains' },
-          { to: '/endpoints/reverseresolve', label: 'Reverse Resolve Domains' },
-
-          { to: '/pricing', label: 'Pricing' },
-          { to: '/faq', label: 'FAQ' },
+           
      
           
         ],

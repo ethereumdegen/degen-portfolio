@@ -2,7 +2,7 @@ import React, { useState } from 'react';
  
  
 import PortfolioConfig from '@/config/portfolio-config'
- 
+import PortfolioElement from '@/views/components/portfolio-element/Main.jsx'
 
 function Portfolio() {
 
@@ -51,19 +51,15 @@ function Portfolio() {
 
                 PortfolioConfig.items.map( (item, index ) => (
 
+                  <PortfolioElement
+                    key={index}
+                    title={item.title}
+                    description={item.description}
                   
-                    <div className="flex flex-col border-2 border-gray-200 rounded text-center " key={index}> 
-
-                   
-                      <div className="h-full">
-                        <a href={item.link} >
-                          <img  className="my-auto" src={`${item.image}`}/>
-                        </a>
-                      </div>
-
-                      <div className="bg-gray-800 text-white py-2 font-bold "> {`${item.title}`} </div>
-
-                    </div>
+                    image={item.image}
+                    link={item.link}                  
+                  />
+                    
 
                 )  )
 

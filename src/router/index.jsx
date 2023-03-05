@@ -6,7 +6,8 @@ import DashboardView from "../views/dashboard/Index";
  
 import Welcome from '../views/welcome/Main'
     
-import Intro from '../views/pages/intro.md'   
+import Blog from '../views/pages/blog.md'   
+import Vibegraph from '../views/pages/vibegraph.md'   
  
 import ErrorPage from "../views/error-page/Main";
 
@@ -25,15 +26,15 @@ function Router() {
 
           { 
             path:"/blog",
-            element: <Intro/>
+            element: <Blog/>
            },
 
            { 
-            path:"/intro",
-            element: <Intro/>
+            path:"/blog/vibegraph",
+            element: <Vibegraph/>
            },
 
-         
+          
 
      
 

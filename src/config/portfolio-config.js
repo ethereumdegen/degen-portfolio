@@ -7,7 +7,7 @@ import vibegraphImage from '@/assets/images/vibegraph.png'
  
 import portfolioImage from '@/assets/images/portfolio.png'
 
-import ensApiImage from '@/assets/images/ensapi_logo.png'
+import ensApiImage from '@/assets/images/ensapi.png'
 
 const config = {
     title: 'Ethereum Degen',
@@ -27,12 +27,12 @@ const config = {
 
         {
             title:"Degen Portfolio",
-            description:"A chain-data event scraping service for ethereum applications.",
+            description:"An open-source personal portfolio website built with vite, react and tailwind.",
             image: portfolioImage,
             link: "https://github.com/ethereumdegen/degen-portfolio"
 
         },
-        
+
         {
             title:"ENS API",
             description:"Fast & free api for ENS domain resolution.",

@@ -1,6 +1,6 @@
 import React,{ useState , useRef, useEffect} from 'react';
  
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 
  
 import {observer} from "mobx-react"
@@ -15,6 +15,9 @@ import FrontendConfig from '@/config/frontend-config'
 function HeaderSidebar({slot,headerStore })   {
  
        
+
+  let navigate = useNavigate();
+
 
   return ( 
    <>
@@ -64,7 +67,21 @@ function HeaderSidebar({slot,headerStore })   {
         <div className= "flex flex-col">
             {FrontendConfig.navbar.items.map((item, index) => (
               <div className='p-1 my-1'>
-                 <Link to={item.to} className='p-2 text-xl text-gray-100 hover:bg-gray-800' key={index} > {item.label} </Link>
+
+                  <span 
+                   className='p-2 cursor-pointer text-xl text-gray-100 hover:bg-gray-800'
+                   key={index} 
+
+                     onClick={()=>{ 
+                      headerStore.setMobileNavOpen(false)
+                      navigate(item.to)
+                    }}
+                  
+                  > 
+                  {item.label}
+                  </span>
+            
+          
               </div>
             ))}
             </div>
