@@ -3,9 +3,9 @@
 import profileImage from '@/assets/images/punk1164.png'
 
 
-import vibegraphImage from '@/assets/images/vibegraph.png'
+import vibegraphImage from '@/assets/images/vibegraph_doodle.png'
  
-import portfolioImage from '@/assets/images/portfolio.png'
+import portfolioImage from '@/assets/images/portfolio_doodle.png'
 
 import ensApiImage from '@/assets/images/ensapi.png'
 
