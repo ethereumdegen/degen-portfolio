@@ -70,7 +70,7 @@ const config = {
              
               {
                 label: 'GitHub',
-                href: 'https://github.com/ethereumdegen',
+                href: 'https://github.com/ethereumdegen/degen-portfolio',
               },
 
              
@@ -81,7 +81,7 @@ const config = {
 
         socials:{
           twitter:"https://twitter.com/ethereumdegen",
-          github:"https://github.com/ethereumdegen"
+          github:"https://github.com/ethereumdegen/degen-portfolio"
         }
       }
     
