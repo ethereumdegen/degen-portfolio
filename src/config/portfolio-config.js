@@ -32,10 +32,10 @@ const config = {
         
 
         {
-            title:"Ethereum for the Beginner Degen ($1)",
+            title:"Ethereum for the Beginner Degen (FREE)",
             description:"The definitive online course for Ethereum including wallet creation, transactions, and the latest security+safety practices.",
             image: degenGuideImage,
-            link: "https://ethereum-degen-network.mn.co/users/onboarding/choose_plan?plan_id=455735&bundle_token=6498938a95ac4ef85643ba4607f4650d&u"
+            link: "https://ethereum-degen-network.mn.co/plans/288623?bundle_token=a23ac35eebfd2d734c0f02730df26035&utm_source=manual"
 
         },
 
