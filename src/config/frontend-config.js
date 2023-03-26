@@ -23,6 +23,7 @@ const config = {
          
           { to:'/', label:'Home' },
           { to:'/blog', label:'Blog' },
+          { to:'https://ethereum-degen-network.mn.co/', label:'Degen Network' },
     
           
         ],
@@ -61,6 +62,11 @@ const config = {
               {
                 label: 'Twitter',
                 href: 'https://twitter.com/ethereumdegen',
+              },
+
+              {
+                label: 'Degen Network',
+                href: 'https://ethereum-degen-network.mn.co/',
               },
             ],
           },
