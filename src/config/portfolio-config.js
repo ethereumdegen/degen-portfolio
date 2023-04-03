@@ -8,6 +8,8 @@ import vibegraphImage from '@/assets/images/vibegraph_doodle.png'
 import portfolioImage from '@/assets/images/portfolio_doodle.png'
 import xcopyImage from '@/assets/images/xcopy_cult.gif'
 
+import defiPenthouseImage from "@/assets/images/defipenthouse.jpg"
+
 
 import degenGuideImage from '@/assets/images/degen_guide.png'
 
@@ -21,15 +23,15 @@ const config = {
 
   
     items: [
+      
+
         {
-            title:"Vibegraph",
-            description:"A chain-data event scraping service for ethereum applications.",
-            image: vibegraphImage,
-            link: "https://github.com/ethereumdegen/vibegraph"
+            title:"Defi Penthouse",
+            description:"A youtube channel for ethereum applications.",
+            image: defiPenthouseImage,
+            link: "http://defipenthouse.com"
 
         },
-
-        
 
         {
             title:"Ethereum for the Beginner Degen (FREE)",
@@ -54,7 +56,14 @@ const config = {
             image: ensApiImage,
             link: "https://ensapi.io"
 
-        }
+        },
+        {
+            title:"Vibegraph",
+            description:"A chain-data event scraping service for ethereum applications.",
+            image: vibegraphImage,
+            link: "https://github.com/ethereumdegen/vibegraph"
+
+        },
 
 
 

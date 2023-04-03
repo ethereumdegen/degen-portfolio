@@ -28,8 +28,8 @@ function Main({title, image, description, link }) {
 
 
       
-      <a href={link} >
-        <img  className="my-auto" src={`${image}`}/>
+      <a href={link} className="h-full w-full" >
+        <img  className="my-auto mx-auto" src={`${image}`}/>
       </a>
 
 
