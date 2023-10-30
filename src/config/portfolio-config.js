@@ -18,7 +18,7 @@ import ensApiImage from '@/assets/images/ensapi.png'
 const config = {
     title: 'Ethereum Degen',
     socialHandle: '@ethereumdegen',
-    socialLink:"https://github.com/ethereumdegen",
+    socialLink:"https://twitter.com/ethereumdegen",
      
     profileImage: profileImage,
 
