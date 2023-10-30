@@ -47,7 +47,7 @@ function Portfolio() {
          
             <div className="w-full  ">
 
-            <div className="grid lg:grid-cols-3 gap-2">
+            <div className="flex flex-col">
 
                {
 

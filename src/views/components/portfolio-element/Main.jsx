@@ -6,45 +6,40 @@ import { useNavigate } from 'react-router-dom';
 import { observer } from "mobx-react";
 
 function Main({title, image, description, link }) {
-
-  const [hovered, setHovered] = useState(false);
+ 
 
   let navigate = useNavigate();
 
 
-  let titleColor = hovered? 'text-green-200' : 'text-white'
+  let titleColor =  'text-white'
  
  
   return (
-    <div className="flex flex-col border-2 border-gray-200 rounded text-center relative"  > 
+    <div className="flex flex-col mt-12 mb-24 border-b-4 border-gray-500"  > 
 
-                   
-    <div className="h-full relative " 
-    
-    onMouseEnter={() => setHovered(true)}
-    onMouseLeave={() => setHovered(false)}
-    
-    >
+      <div className="w-full">      
+          <a href={link} className="h-full w-full text-xl font-bold block hover:text-blue-500" > 
+        {`${title}`} 
+          </a>
+        
+       </div>
 
+    <div className="flex flex-row  ">
 
-      
-      <a href={link} className="h-full w-full" >
-        <img  className="my-auto mx-auto" src={`${image}`}/>
-      </a>
-
-
-    </div>
-
-    <div 
-    className={`bg-gray-800 ${titleColor} py-2 font-bold `}
-    
-    > {`${title}`} </div>
-
-    {hovered && 
-        <div className="absolute h-full w-full bg-black  pointer-events-none  bg-opacity-50  p-8">
-        <div className=" text-white text-xl">{`${description}`}</div>
+       <div className=" text-gray-800 text-lg flex-grow py-8">
+        {`${description}`}
         </div>
-    }
+     
+      <div>
+        <a href={link} className="h-full w-1/4 p-8" >
+          <img  className="mx-auto" src={`${image}`} style={{maxHeight:"140px"}}/>
+        </a>
+      </div>
+
+
+    </div> 
+      
+    
 
   </div>
   )
