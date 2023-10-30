@@ -1,13 +1,15 @@
 import { useRoutes } from "react-router-dom";
 import MainLayout from "../layouts/Main";
-import DashboardLayout from "../layouts/Dashboard";
-import DashboardView from "../views/dashboard/Index";
-  
+ 
+
+import ContextLayout from "../layouts/Context";
+import DocumentationLayout from "../layouts/Documentation";
+ 
  
 import Welcome from '../views/welcome/Main'
     
-import Blog from '../views/pages/blog.md'   
-import Vibegraph from '../views/pages/vibegraph.md'   
+import Blog from '../views/docs/blog.md'   
+import Vibegraph from '../views/docs/vibegraph.md'   
  
 import ErrorPage from "../views/error-page/Main";
 
@@ -15,61 +17,61 @@ import ErrorPage from "../views/error-page/Main";
     
 function Router() {
   const routes = [
-    {
-      path: "/",
-      element: <MainLayout />,
-      children:  [ 
-          {
-            path:"/",
-            element: <Welcome />, 
-          },
 
-          { 
-            path:"/blog",
-            element: <Blog/>
-           },
 
-           { 
-            path:"/blog/vibegraph",
-            element: <Vibegraph/>
-           },
-
-          
-
-     
-
-         
-
-        ]
-      
-    },
-
-   
-
-    {
-      path: "/dashboard",
-      element: <DashboardLayout />,
+     {
+      element: <ContextLayout />,
       children: [
+
+
         {
-          path: "/dashboard",
-          element: <DashboardView />,
+          path: "/",
+          element: <MainLayout />,
+          children:  [ 
+              {
+                path:"/",
+                element: <Welcome />, 
+              },
+
+              
+
+            ]
+          
         },
+
       
+
+        {
+          
+          element: <DocumentationLayout />,
+          children: [
+            {
+              path: "/blog",
+              element: <Blog />,
+            },
+          
+            {
+              path: "/blog/vibegraph",
+              element: <Vibegraph />,
+            },
         
-    
+          
+          ],
+        },
+
        
-      ],
-    },
-   
-  
-    {
-      path: "/error-page",
-      element: <ErrorPage />,
-    },
-    {
-      path: "*",
-      element: <ErrorPage />,
-    },
+      
+      
+        {
+          path: "/error-page",
+          element: <ErrorPage />,
+        },
+        {
+          path: "*",
+          element: <ErrorPage />,
+        },
+
+    ] }
   ];
 
   return useRoutes(routes);

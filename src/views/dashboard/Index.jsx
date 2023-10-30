@@ -5,8 +5,7 @@ import axios from "axios";
 import ApiKeyRow from "@/views/components/api-key-row/Main.jsx";
 
 import { useState, useEffect } from 'react';
- 
-import { useOutletContext } from 'react-router-dom';
+  
 
 import { observer } from "mobx-react";
 import {observe} from 'mobx'
@@ -18,14 +17,14 @@ import { getBackendServerUrl } from '../../../lib/app-helper'
 
 
 
+import { Web3StoreContext } from "@/stores/stores-context";
+
 
 function Main(  ) {
+ 
+  const web3Store = useContext(Web3StoreContext);
 
-  //figure out how to make this work 
-     
-    const [web3Store] = useOutletContext(); // <-- access context value
-
-    console.log('web3Store' , web3Store)
+    
 
     let statusFilter 
 

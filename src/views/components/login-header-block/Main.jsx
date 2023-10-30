@@ -1,13 +1,39 @@
  
+import {useContext,useEffect} from 'react';
+
 import AccountDropdownMenu from "@/views/components/account-dropdown-menu/Main.jsx";
 
 import { observer } from "mobx-react" 
 
-function Main( {sidebarStore, web3Store }  ) {
+
+import {
+  Web3StoreContext, 
+  SideMenuStoreContext,
+  SideBarStoreContext
+} from '@/stores/stores-context';
+
+
+
+
+function Main(  ) {
+
+  const sidebarStore = useContext(SideBarStoreContext);
+  
+  const web3Store = useContext(Web3StoreContext);
+
 
 
 
   const requireSignIn = false 
+
+
+
+
+  useEffect( () => {
+
+    web3Store.soft_reconnect()
+
+  }, [] )
 
 
   return (

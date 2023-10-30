@@ -1,8 +1,7 @@
 import { Transition } from "react-transition-group";
-import { useState, useEffect } from "react";
+import { useState, useEffect , useContext} from "react";
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
-
-import { linkTo, nestedMenu, enter, leave } from "./index";
+ 
 import { Lucide } from "@/base-components";
 
 import dom from "@left4code/tw-starter/dist/js/dom";
@@ -24,11 +23,13 @@ import FrontendConfig from '@/config/frontend-config'
  
  import SideMenu from '@/views/components/side-menu/Main.jsx'
  
+ 
 
-const sidebarStore = new Web3SidebarStore()
-const web3Store = new Web3Store() 
-const sideMenuStore = new SideMenuStore()
-
+ import {
+  Web3StoreContext, 
+  SideMenuStoreContext,
+  SideBarStoreContext
+} from '@/stores/stores-context';
 /*
 https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwilo-3H4LP9AhVyElkFHVlID8EQFnoECAwQAQ&url=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F62336340%2Fcannot-update-a-component-while-rendering-a-different-component-warning&usg=AOvVaw0qVeI0E9QBjWxTnsx7CAZG
 */
@@ -39,79 +40,9 @@ function Dashboard() {
   const location = useLocation();
 
  
-   
-
-  /*
-  // Set active/inactive simple menu
-  const toggleSimpleMenu = (event) => {
-    event.preventDefault();
-
-    if (simpleMenu.active) {
-      setSimpleMenu(
-        {
-          ...simpleMenu,
-          hover: true,
-        },
-        (simpleMenu) => {
-          dom(".wrapper")[0].animate(
-            {
-              marginLeft: "270px",
-            },
-            {
-              duration: 200,
-            }
-          ).onfinish = function () {
-            dom(".wrapper").css("margin-left", "270px");
-            setSimpleMenu(
-              {
-                ...simpleMenu,
-                hover: false,
-                active: false,
-                wrapper: false,
-              },
-              () => {
-                dom(".wrapper").removeAttr("style");
-              }
-            );
-          };
-        }
-      );
-    } else {
-      setSimpleMenu(
-        {
-          ...simpleMenu,
-          active: true,
-          wrapper: true,
-        },
-        () => {
-          dom(".wrapper").css("margin-left", "270px");
-          dom(".wrapper")[0].animate(
-            {
-              marginLeft: "112px",
-            },
-            {
-              duration: 200,
-            }
-          ).onfinish = function () {
-            dom(".wrapper").removeAttr("style");
-          };
-        }
-      );
-    }
-  };
-
-*/
-  /*
-
-  useEffect(() => {
-    dom("body").removeClass("error-page").removeClass("login").addClass("main");
-    new SimpleBar(dom(".side-nav .scrollable")[0]);
-   // setFormattedMenu(sideMenu());
-  }, [sideMenuStore, location.pathname]);
+  const sideMenuStore = useContext(SideMenuStoreContext);
   
-  
-  */
-
+    
   return (
 
 
@@ -119,8 +50,7 @@ function Dashboard() {
 
 
       <Web3Sidebar 
-           sidebarStore={sidebarStore}
-           web3Store={web3Store}
+          
            
            slot={<div> </div>} 
          
@@ -133,7 +63,7 @@ function Dashboard() {
     
       {sideMenuStore.active &&
           <SideMenu 
-          sideMenuStore={sideMenuStore}
+         
           />
         }
       {/* END: Side Menu */}
@@ -144,16 +74,12 @@ function Dashboard() {
 
       {/* BEGIN: Content */}
       <div
-          class="flex-grow"
+          className="flex-grow"
       >
         <div className="flex-flex-col">
          
         <TopBar
-
-          web3Store={web3Store}
-          sidebarStore={sidebarStore}
-
-          sideMenuStore={sideMenuStore}
+ 
         
         
         />
@@ -162,8 +88,7 @@ function Dashboard() {
 
         <div className="content">
           <Outlet 
-          
-          context={[web3Store]}
+           
           />
         </div>
       </div>

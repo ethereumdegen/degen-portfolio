@@ -27,13 +27,13 @@ function Main() {
     <div className="bg-white">
          {/*  Site header */}
          <Header
-           
+           mode="docs"
           
          />
 
         <div   className="xl:hidden" >
           <HeaderSidebar
-          
+            mode="docs"
         
          />
           </div>

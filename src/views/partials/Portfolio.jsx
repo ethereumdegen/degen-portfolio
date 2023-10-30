@@ -27,7 +27,9 @@ function Portfolio() {
           <div className="font-bold text-lg">  {`${PortfolioConfig.title}` }  </div>
         
           <div className="text-md"> 
+          <a href={PortfolioConfig.socialLink} target="_blank" >
                 {`${PortfolioConfig.socialHandle}`}
+                </a>
            </div>
 
         </div>

@@ -1,4 +1,4 @@
-import React,{ useState , useRef, useEffect} from 'react';
+import { useState , useRef, useEffect, useContext} from 'react';
  
 
  
@@ -19,10 +19,15 @@ import { copyToClipboard } from '../../../utils/clipboard';
 const showSigninButton = false 
 
 
+import { Web3StoreContext,HeaderStoreContext , SideBarStoreContext} from "@/stores/stores-context";
 
-function Web3Sidebar({slot,web3Store,sidebarStore })   {
+function Web3Sidebar({slot })   {
  
-    
+  const headerStore = useContext(HeaderStoreContext);
+
+  const web3Store = useContext(Web3StoreContext);
+
+  const sidebarStore = useContext(SideBarStoreContext);
 
   let connectWeb3 = async function() {
 

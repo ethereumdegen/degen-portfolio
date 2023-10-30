@@ -3,15 +3,10 @@ import React from 'react';
 import Portfolio from '../partials/Portfolio'; 
 
 import { observer } from "mobx-react";
-
-import { useOutletContext } from 'react-router-dom';
-
+ 
 function Home() {
 
-
-
-  const [web3Store] = useOutletContext()
-
+ 
 
 
 

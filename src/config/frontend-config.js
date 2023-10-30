@@ -2,6 +2,7 @@
  
 import homeImage from '@/assets/images/ensapi_logo.png'
 import favicon from '@/assets/images/fire_logo.png'
+import punkicon from '@/assets/images/punk1164.png'
 
 const config = {
     title: 'Portfolio - ethereumdegen',
@@ -9,6 +10,7 @@ const config = {
     url: 'https://ethereumdegen,com',
     baseURL: '/',
     favicon: favicon,
+    punkicon: punkicon,
     homeImage: homeImage,
 
 

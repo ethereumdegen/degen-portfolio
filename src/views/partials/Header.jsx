@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect, useContext} from 'react';
 import { Link } from 'react-router-dom';
 
 import LoginHeaderBlock from "@/views/components/login-header-block/Main.jsx";
@@ -9,10 +9,12 @@ import FrontendConfig from '@/config/frontend-config'
  
 import { observer } from "mobx-react" 
 
+import { HeaderStoreContext } from "@/stores/stores-context";
 
-function Header( {sidebarStore, web3Store, sessionStore, headerStore} ) {
+function Header( { } ) {
 
   const [top, setTop] = useState(true);
+  const headerStore = useContext(HeaderStoreContext);
 
 
   // detect whether user has scrolled the page down by 10px 
@@ -34,7 +36,7 @@ function Header( {sidebarStore, web3Store, sessionStore, headerStore} ) {
 
 
               <div 
-              className="xl:hidden cursor-pointer" 
+              className="lg:hidden cursor-pointer" 
               onClick={()=>{ headerStore.toggleMobileNav() }}
               >
                 <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="2" d="M4 7h22M4 15h22M4 23h22"></path>
@@ -57,7 +59,7 @@ function Header( {sidebarStore, web3Store, sessionStore, headerStore} ) {
             </Link>
             </div>
 
-            <div className="hidden xl:block">
+            <div className="hidden lg:block">
             {FrontendConfig.navbar.items.map((item, index) => (
               <Link to={item.to} className='p-4 text-lg' key={index} > {item.label} </Link>
             ))}
@@ -72,8 +74,7 @@ function Header( {sidebarStore, web3Store, sessionStore, headerStore} ) {
 
 
               <LoginHeaderBlock
-                web3Store={web3Store}
-                sidebarStore={sidebarStore}
+               
               
               ></LoginHeaderBlock>
 
