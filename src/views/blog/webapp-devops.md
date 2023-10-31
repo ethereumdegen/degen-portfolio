@@ -54,7 +54,7 @@ Now that you have your droplet, you'll need to configure your DNS records on Clo
 1. Go back to your Cloudflare account and navigate to the DNS settings.
 2. Add an `A` record with the name `@` pointing to your droplet's IP address.
 3. Add another `A` record with the name `api` also pointing to your droplet's IP address.
-4. Once we tinker with out Nginx service in the next step, this will let us host two different services on the same server which can be called separately by YOURDOMAIN.com and api.YOURDOMAIN.com respectively.  This will be useful for a frontend and for a backend.  
+4. Once we tinker with our Nginx service in the next step, this will let us host two different services on the same server which can be called separately by YOURDOMAIN.com and api.YOURDOMAIN.com respectively.  This will be useful for a frontend and for a backend.  
 
 ---
 
