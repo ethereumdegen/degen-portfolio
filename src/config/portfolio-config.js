@@ -27,6 +27,15 @@ const config = {
       
 
         {
+            title:"Webapp Devops 101",
+            description:"  If you're new and want to learn how to deploy a web server, this guide is for you",
+            image: ensApiImage,
+            link: "/docs/webapp-devops"
+
+        },
+
+
+        {
             title:"Defi Penthouse",
             description:"A youtube channel for ethereum applications.",
             image: defiPenthouseImage,
@@ -51,13 +60,6 @@ const config = {
         },
 
 
-        {
-            title:"ENS API",
-            description:"Fast & free api for ENS domain resolution.",
-            image: ensApiImage,
-            link: "https://ensapi.io"
-
-        },
         {
             title:"Vibegraph",
             description:"A chain-data event scraping service for ethereum applications.",

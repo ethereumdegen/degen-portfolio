@@ -11,6 +11,8 @@ import Welcome from '../views/welcome/Main'
 import Blog from '../views/docs/blog.md'   
 import Vibegraph from '../views/docs/vibegraph.md'   
  
+import WebappDevops from '../views/docs/webapp-devops.md'
+
 import ErrorPage from "../views/error-page/Main";
 
   
@@ -53,6 +55,11 @@ function Router() {
             {
               path: "/blog/vibegraph",
               element: <Vibegraph />,
+            },
+
+            {
+              path: "/blog/webapp-devops",
+              element: <WebappDevops />,
             },
         
           
