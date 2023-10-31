@@ -35,7 +35,7 @@ https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwilo-3H
 */
 
 
-function Dashboard() {
+function Main() {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -97,4 +97,4 @@ function Dashboard() {
   );
 }
 
-export default observer(Dashboard);
+export default observer(Main);

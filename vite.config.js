@@ -10,7 +10,7 @@ export default defineConfig({
   plugins: [
     Markdown({
       wrapperComponent: ["src/views/docs/components/*.{jsx,tsx}"],
-      wrapperComponentPath: "src/views/docs/DocsWrapper",
+      wrapperComponentPath: "src/views/blog/BlogWrapper",
     }),
     react({
       include: [/\.tsx$/, /\.md$/], // <-- add .md 

@@ -1,6 +1,6 @@
 # Deploying a Webserver: An Opinionated Guide for New DevOps and Programmers
 
- If you're new and want to learn how to deploy a web server, this guide is for you. We will go through six essential steps to get a web server up and running. These steps will lightly cover everything from domain purchasing to configuring your server to run applications.  
+ If you're new and want to learn how to deploy a web server, this guide is for you. This is my opinionated guide with six essential steps to get a web server up and running. These steps will lightly cover everything from domain purchasing to configuring your server to run applications.  If you get stuck or lost, I recommend asking chat-gpt4 or another LLM.  Im serious thats the best way atm. 
 
 ## Table of Contents
 - [Purchase a .com Domain](#purchase-a-com-domain)
@@ -8,7 +8,7 @@
 - [Create a Droplet on DigitalOcean](#create-a-droplet-on-digitalocean)
 - [Configure DNS on Cloudflare](#configure-dns-on-cloudflare)
 - [Configure Nginx on Ubuntu](#configure-nginx-on-ubuntu)
-- [About Frontend and Web API Servers](#about-frontend-and-web-api-servers)
+- [About Application Architecture](#about-application-architecture)
 
 ---
 
@@ -54,7 +54,7 @@ Now that you have your droplet, you'll need to configure your DNS records on Clo
 1. Go back to your Cloudflare account and navigate to the DNS settings.
 2. Add an `A` record with the name `@` pointing to your droplet's IP address.
 3. Add another `A` record with the name `api` also pointing to your droplet's IP address.
-4. We can now host two different services on the same server which can be called separately by YOURDOMAIN.com and api.YOURDOMAIN.com respectively.  This will be useful for a frontend and for a backend.  
+4. Once we tinker with out Nginx service in the next step, this will let us host two different services on the same server which can be called separately by YOURDOMAIN.com and api.YOURDOMAIN.com respectively.  This will be useful for a frontend and for a backend.  
 
 ---
 
@@ -79,19 +79,10 @@ We're going to use Nginx as our web server on Ubuntu. We'll configure it to list
     sudo nano /etc/nginx/sites-enabled/default 
     ```
 
-4. For `api`, insert the following configuration for our backend service which will run on port 8000:
-    ```nginx
-    server {
-        listen 80;
-        server_name api.your_domain.com;
 
-        location / {
-            proxy_pass http://localhost:8000;
-        }
-    }
-    ```
+  
 
-5. For `root`, insert the following configuration for our frontend service which will run on port 3000 (instead of proxy passing to a port you can also just serve static built files here if you are an advanced user):
+4. For `frontend`, insert the following configuration for our frontend service which will run on port 3000 (instead of proxy passing to a port you can also just serve static built files here if you are an advanced user and can deal with file permissions):
     ```nginx
     server {
         listen 80;
@@ -104,6 +95,18 @@ We're going to use Nginx as our web server on Ubuntu. We'll configure it to list
     ```
  
 
+5. For `api`, insert the following configuration for our backend service which will run on port 8000:
+    ```nginx
+    server {
+        listen 80;
+        server_name api.your_domain.com;
+
+        location / {
+            proxy_pass http://localhost:8000;
+        }
+    }
+     ```
+
 6. Test Nginx configurations and restart:
     ```bash
     sudo nginx -t
@@ -112,10 +115,10 @@ We're going to use Nginx as our web server on Ubuntu. We'll configure it to list
 
 ---
 
-## About Frontend and Web API Servers
+## About Application Architecture
 
-Finally, a note on application architecture. You could host a frontend server, such as one built with React, on port 3000. Likewise, a Web API server like Express in Node or Actix in Rust could be hosted on port 8000 for your GET and POST endpoints. These ports correspond to the Nginx configurations we set up earlier.
+Finally, a note on application architecture. You could host a frontend server, such as React + Express to publish the static files on port 3000. Likewise, a Web API server like Express in Node or Actix in Rust could be hosted on port 8000 for your GET and POST endpoints with database connection and other backend secrets that need to be obscured behind endpoints. These ports correspond to the Nginx configurations we set up earlier.
 
 ---
 
-Congratulations! You've just deployed your web server. Feel free to leave comments or questions below. Happy coding!
+Congratulations! You've just deployed your own web server.  

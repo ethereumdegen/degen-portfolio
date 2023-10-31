@@ -11,8 +11,8 @@ function DocsSidenav({}) {
     <>
       <div className=" p-6  w-full flex flex-col hidden lg:block  ">
         <div
-          className="flex flex-col font-ubuntu font-bold text-lg text-gray-500 "
-          style={{ minWidth: "120px" }}
+          className="flex flex-col font-ubuntu  text-lg text-gray-500 "
+          style={{ minWidth: "200px" }}
         >
           {DocsConfig.navbar.items.map((item, index) => (
             <SidenavElement

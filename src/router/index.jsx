@@ -3,15 +3,15 @@ import MainLayout from "../layouts/Main";
  
 
 import ContextLayout from "../layouts/Context";
-import DocumentationLayout from "../layouts/Documentation";
+import BlogLayout from "../layouts/Blog";
  
  
 import Welcome from '../views/welcome/Main'
     
-import Blog from '../views/docs/blog.md'   
-import Vibegraph from '../views/docs/vibegraph.md'   
+import Blog from '../views/blog/blog.md'   
+import Vibegraph from '../views/blog/vibegraph.md'   
  
-import WebappDevops from '../views/docs/webapp-devops.md'
+import WebappDevops from '../views/blog/webapp-devops.md'
 
 import ErrorPage from "../views/error-page/Main";
 
@@ -45,7 +45,7 @@ function Router() {
 
         {
           
-          element: <DocumentationLayout />,
+          element: <BlogLayout />,
           children: [
             {
               path: "/blog",

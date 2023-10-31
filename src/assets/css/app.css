@@ -44,7 +44,7 @@
   */
 @import "./fonts/_roboto.css";
 @import "./fonts/_ubuntu.css";
-
+@import "./fonts/_geist.css";
 
 @import "./components/side-nav-custom.css";
 
@@ -117,9 +117,9 @@
  |
  */
 
-@import "./components/custom.css";
 
-@import "./components/_global.css";
+@import "global.css";
+ 
 @import "./components/_wrapper.css";
 @import "./components/_top-bar.css";
 @import "./components/_box.css";

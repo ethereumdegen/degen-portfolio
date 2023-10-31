@@ -50,7 +50,8 @@ function Page(props: Props) {
           <DocsSidenav  />
           </div>
 
-         <div className="markdown-body overflow-x-scroll px-8 py-8 flex-grow border-t-2 border-r-2 border-b-2 border-gray-200 ">
+         <div className="markdown-body overflow-x-scroll
+          px-8 py-8 flex-grow border-t-2 border-r-2 border-b-2 border-gray-200 ">
            {children}
           </div>
 

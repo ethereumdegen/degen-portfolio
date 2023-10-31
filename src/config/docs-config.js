@@ -9,7 +9,7 @@ const config = {
         
         items: [
          
-          { to:'/blog', label:'Ethereum Degen\'s Blog' },
+          { to:'/blog', label:'Blog: Main' },
     
           { to:'/blog/vibegraph', label:'Vibegraph' },
           { to:'/blog/webapp-devops', label:'Webapp Devops' },

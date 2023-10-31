@@ -9,11 +9,10 @@ import portfolioImage from '@/assets/images/portfolio_doodle.png'
 import xcopyImage from '@/assets/images/xcopy_cult.gif'
 
 import defiPenthouseImage from "@/assets/images/defipenthouse.jpg"
+ 
+import indiefutureImage from '@/assets/images/indiefuture.gif'
 
-
-import degenGuideImage from '@/assets/images/degen_guide.png'
-
-import ensApiImage from '@/assets/images/ensapi.png'
+import laptopImage from '@/assets/images/laptop.png'
 
 const config = {
     title: 'Ethereum Degen',
@@ -28,29 +27,13 @@ const config = {
 
         {
             title:"Webapp Devops 101",
-            description:"  If you're new and want to learn how to deploy a web server, this guide is for you",
-            image: ensApiImage,
-            link: "/docs/webapp-devops"
+            description:"For the computer dev-ops beginning learning how to deploy a web server, this guide is for you, starting with registering a domain and ending in how to host your frontend and backend services",
+            image: laptopImage,
+            link: "/blog/webapp-devops"
 
-        },
+        }, 
 
-
-        {
-            title:"Defi Penthouse",
-            description:"A youtube channel for ethereum applications.",
-            image: defiPenthouseImage,
-            link: "http://defipenthouse.com"
-
-        },
-
-        {
-            title:"Ethereum for the Beginner Degen (FREE)",
-            description:"The definitive online course for Ethereum including wallet creation, transactions, and the latest security+safety practices.",
-            image: degenGuideImage,
-            link: "https://ethereum-degen-network.mn.co/plans/288623?bundle_token=a23ac35eebfd2d734c0f02730df26035&utm_source=manual"
-
-        },
-
+         
         {
             title:"XCOPY Cult",
             description:"XCOPY fan website displaying original works.",
@@ -62,11 +45,33 @@ const config = {
 
         {
             title:"Vibegraph",
-            description:"A chain-data event scraping service for ethereum applications.",
+            description:"A chain-data event scraping service for ethereum applications. Now built in Rust",
             image: vibegraphImage,
-            link: "https://github.com/ethereumdegen/vibegraph"
+            link: "https://github.com/ethereumdegen/vibegraph-rs"
 
         },
+
+
+
+        {
+            title:"Indiefuture",
+            description:"Large scale e-commerce for physical products using crypto payments.",
+            image: indiefutureImage,
+            link: "https://indiefuture.com"
+
+        },
+
+
+        {
+            title:"Defi Penthouse",
+            description:"A youtube channel for the future of finance in ethereum applications.",
+            image: defiPenthouseImage,
+            link: "http://defipenthouse.com"
+
+        }, 
+
+     
+
 
 
 
