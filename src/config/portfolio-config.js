@@ -47,7 +47,7 @@ const config = {
             title:"Vibegraph",
             description:"A chain-data event scraping service for ethereum applications. Now built in Rust",
             image: vibegraphImage,
-            link: "https://github.com/ethereumdegen/vibegraph-rs"
+            link: "/blog/vibegraph"
 
         },
 
