@@ -10,7 +10,7 @@ import xcopyImage from '@/assets/images/xcopy_cult.gif'
 
 import defiPenthouseImage from "@/assets/images/defipenthouse.jpg"
  
-import indiefutureImage from '@/assets/images/indiefuture.gif'
+import skyGalleryImage from '@/assets/images/aleqth_sky.jpeg'
 
 import laptopImage from '@/assets/images/laptop.png'
 
@@ -33,6 +33,26 @@ const config = {
 
         }, 
 
+
+        {
+            title:"Sky Gallery 3D",
+            description:"A virtual 3d html gallery for artworks by artist Aleqth.",
+            image: skyGalleryImage,
+            link: "https://sky.aleqth.com"
+
+        },
+
+
+
+        {
+            title:"Defi Penthouse",
+            description:"A youtube channel for the future of finance in ethereum applications.",
+            image: defiPenthouseImage,
+            link: "http://defipenthouse.com"
+
+        }, 
+
+
          
         {
             title:"XCOPY Cult",
@@ -51,24 +71,6 @@ const config = {
 
         },
 
-
-
-        {
-            title:"Indiefuture",
-            description:"Large scale e-commerce for physical products using crypto payments.",
-            image: indiefutureImage,
-            link: "https://indiefuture.com"
-
-        },
-
-
-        {
-            title:"Defi Penthouse",
-            description:"A youtube channel for the future of finance in ethereum applications.",
-            image: defiPenthouseImage,
-            link: "http://defipenthouse.com"
-
-        }, 
 
      
 
